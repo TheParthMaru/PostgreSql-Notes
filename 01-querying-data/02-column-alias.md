@@ -1,7 +1,6 @@
 # Column Alias
 
 - Allows us to assign a temporary column name to the colum or an expression that we use in `SELECT` to query data.
-
 - It only exists temporarily during the execution of the query.
 
 ## Syntax
@@ -44,7 +43,7 @@ FROM
   customer;
 ```
 
-![](C:\Users\parth\AppData\Roaming\marktext\images\2023-07-15-11-52-00-image.png)
+![Alt text](images/image-5.png)
 
 ```sql
 SELECT
@@ -54,7 +53,7 @@ FROM
   customer;
 ```
 
-![](C:\Users\parth\AppData\Roaming\marktext\images\2023-07-15-11-53-50-image.png)
+![Alt text](images/image-6.png)
 
 ## Column alias with space
 
@@ -70,9 +69,7 @@ SELECT  column_name AS "column alias";
 SELECT
   first_name || ' ' || last_name AS "full name"
 FROM
-  customer; 
+  customer;
 ```
 
-![](C:\Users\parth\AppData\Roaming\marktext\images\2023-07-15-12-19-11-image.png)
-
-
+![Alt text](images/image-7.png)

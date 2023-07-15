@@ -1,7 +1,6 @@
 # `ORDER BY` Clause
 
 - When we query table using `SELECT`, it returns data in an unspecified order.
-
 - To sort the rows in ascending or descending order, we use `ORDER BY` clause in `SELECT`.
 
 ## Syntax
@@ -18,10 +17,8 @@ ORDER BY
 ```
 
 - The `sort_expression` can be a column or an expression.
-
 - `ASC` stands for ascending order which is the default value and `DESC` stands for descending order.
-
-- `FROM` -> `SELECT` -> `ORDER BY`.
+- `FROM` → `SELECT` → `ORDER BY`.
 
 ## Examples
 
@@ -37,7 +34,7 @@ ORDER BY
   first_name ASC;
 ```
 
-![](C:\Users\parth\AppData\Roaming\marktext\images\2023-07-15-18-06-53-image.png)
+![Alt text](images/image-8.png)
 
 ### Sort rows by multiple columns
 
@@ -52,7 +49,7 @@ ORDER BY
   last_name DESC;
 ```
 
-![](C:\Users\parth\AppData\Roaming\marktext\images\2023-07-15-18-16-10-image.png)
+![Alt text](images/image-9.png)
 
 - Here `ORDER BY` clause sorts `first_name` column first in ascending order and then sorts `last_name` column in descending order.
 
@@ -68,14 +65,13 @@ ORDER BY
   len DESC;
 ```
 
-![](C:\Users\parth\AppData\Roaming\marktext\images\2023-07-15-18-29-10-image.png)
+![Alt text](images/image-10.png)
 
 - Here `LENGTH()` function accepts a string and returns the length of the string.
 
-# `ORDER BY` clause with `NULL`
+## `ORDER BY` clause with `NULL`
 
 - If data is unknown, it is indicated by `NULL`.
-
 - When we sort rows that contains `NULL`, we can specify the order of `NULL` with other non-null values by using `NULLS FIRST` or `NULLS LAST` option of the `ORDER BY` clause.
 
 ```sql
@@ -84,7 +80,7 @@ ORDER BY sort_expression [ASC | DESC] [NULLS FIRST | NULLS LAST]
 
 - `NULLS FIRST` places `NULL` before other non-null values and `NULLS LAST` places `NULL` after other non-null values.
 
-## Example
+### Example
 
 ```sql
 -- Creating temporary table to work on
@@ -94,7 +90,7 @@ CREATE TABLE sort_demo(
 
 -- Insert data in sort_demo table
 INSERT INTO sort_demo(num)
-VALUES (1),(2),(3),(null); 
+VALUES (1),(2),(3),(null);
 ```
 
 ```sql
@@ -106,10 +102,9 @@ ORDER BY
   num;
 ```
 
-![](C:\Users\parth\AppData\Roaming\marktext\images\2023-07-15-18-41-23-image.png)
+![Alt text](images/image-11.png)
 
 - By default `ORDER BY` sorts table in ascending order and places `NULL` values at the end.
-
 - So if we are using `ASC` option, then `ORDER BY` uses `NULLS LAST` option by default and when we are using `DESC` option, `ORDER BY` uses `NULLS FIRST` option by default.
 
 ```sql
@@ -118,7 +113,7 @@ FROM sort_demo
 ORDER BY num NULLS FIRST;
 ```
 
-![](C:\Users\parth\AppData\Roaming\marktext\images\2023-07-15-18-48-36-image.png)
+![Alt text](images/image-12.png)
 
 ```sql
 SELECT num
@@ -126,7 +121,7 @@ FROM sort_demo
 ORDER BY num DESC;
 ```
 
-![](C:\Users\parth\AppData\Roaming\marktext\images\2023-07-15-18-49-16-image.png)
+![Alt text](images/image-13.png)
 
 ```sql
 SELECT num
@@ -134,6 +129,4 @@ FROM sort_demo
 ORDER BY num DESC NULLS LAST;
 ```
 
-![](C:\Users\parth\AppData\Roaming\marktext\images\2023-07-15-18-50-03-image.png)
-
-
+![Alt text](images/image-14.png)

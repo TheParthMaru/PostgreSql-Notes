@@ -68,7 +68,7 @@ FROM
 
 - `*` is a shorthand for all columns and we use it to save some typing instead of listing all the columms.
 - However, it is not a good practice to use it when we embed SQL in applications code like Python, Java, Nodejs, etc, because:
-  - **DB Performance**: It affects performance as a table can have a long list of columns which might not be necessary to include.  
+  - **DB Performance**: It affects performance as a table can have a long list of columns which might not be necessary to include.
   - **Application Performance**: Retrieving unnecessary data from the db increases the traffic between the db server and applicaiton server which results in slow application performance and less scalability.
 
 ### Query using expression
@@ -90,4 +90,4 @@ FROM
 SELECT 5 * 3;
 ```
 
-![](images/image-4.png)
+![Query with expression with omitting `FROM`](images/image-4.png)

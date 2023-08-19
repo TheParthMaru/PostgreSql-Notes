@@ -281,6 +281,7 @@ NATURAL JOIN department d;
 ![Alt text](images/image-8.png)
 
 - We have a common column `dept_id` between `employee` and `department` table.
+- In such cases where two tables share a common column, Postgres uses `INNER JOIN` by default.
 - For tables, who does not share common columns, `NATURAL JOIN` can go horribly wrong.
 - In such cases, it generally performs `CROSS JOIN`.
 - Hence, it is a bad idea to use `NATURAL JOIN` as we are depending on the SQL to decide the condition and thus produce irrelevant results.
